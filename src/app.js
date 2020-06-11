@@ -5,6 +5,7 @@ const geocode=require("./utils/geocode");
 const forcast=require("./utils/forecast");
 
 const app=express();
+const port=process.env.PORT||3000;
 const publicdirectory=path.join(__dirname,"../public");
 const Viewspath=path.join(__dirname,"../template/views");
 const Partialspath=path.join(__dirname,"../template/partials")
@@ -99,6 +100,6 @@ app.get('*',(req,res)=>{
     });
 })
 
-app.listen(3000,()=>{
-    console.log("server is up at 3000");
+app.listen(port,()=>{
+    console.log("server is up at 3000"+port);
 });
