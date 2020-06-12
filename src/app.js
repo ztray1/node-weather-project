@@ -101,5 +101,5 @@ app.get('*',(req,res)=>{
 })
 
 app.listen(port,()=>{
-    console.log("server is up at 3000"+port);
+    console.log("server is up at "+port);
 });

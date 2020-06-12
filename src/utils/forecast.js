@@ -9,7 +9,7 @@ const forecast =(latitude,longitude,callback)=>{
             callback("unable to find the location",undefined);
         }else{
             console.log(body);
-            callback(undefined,"The weather of this city is "+body.current.weather[0].description+". The temperature of this city is "+body.current.temp+".");
+            callback(undefined,"The weather of this city is "+body.current.weather[0].description+". The temperature of this city is "+(body.current.temp/32).toFixed(2)+" degree.");
         }
     })
 }
