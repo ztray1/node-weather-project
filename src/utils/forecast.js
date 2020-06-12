@@ -8,7 +8,8 @@ const forecast =(latitude,longitude,callback)=>{
         }else if(body.cod==="400"){
             callback("unable to find the location",undefined);
         }else{
-            callback(undefined,body.current.weather[0].description)
+            console.log(body);
+            callback(undefined,"The weather of this city is "+body.current.weather[0].description+". The temperature of this city is "+body.current.temp+".");
         }
     })
 }
